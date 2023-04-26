@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTyps from 'prop-types'
 import { Link } from 'react-router-dom'
+import {Swiper, SwiperSlide} from 'swiper'
 import './Movie.css'
 
 const Movie = ({id, coverImg, title, summary, genres}) => {
   return (
     <div className='movie-box'>
-      <div>
+      <div className='movie-list'>
+        <Swiper>
+          
         <img src={coverImg} alt="movie img" className='movie-img'/>
+        </Swiper>
         <h2>
           <Link to={`/movie/${id}`}>
             {title}
