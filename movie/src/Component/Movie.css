@@ -26,5 +26,4 @@ li {
 .movie-img {
     scale: 90%;
     z-index: 3;
-    border: 2px solid blue;
 }
