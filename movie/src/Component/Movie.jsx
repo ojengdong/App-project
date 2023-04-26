@@ -1,23 +1,27 @@
 import React from 'react'
 import PropTyps from 'prop-types'
 import { Link } from 'react-router-dom'
+import './Movie.css'
 
 const Movie = ({id, coverImg, title, summary, genres}) => {
   return (
-    <div>
+    <div className='movie-box'>
+      <div>
         <img src={coverImg} alt="movie img" />
         <h2>
           <Link to={`/movie/${id}`}>
             {title}
           </Link>
         </h2>
-        <p>{summary}</p>
-        <ul>
+        <p className='summary'>{summary.length > 235 ? `${summary.slice(0,235)}...`: summary}</p>
+        <ul className='genres-item'>
             {genres.map((e) => 
-            (<li key={e}>{e}</li>)
+            (<li className='genres-list' key={e}>{e}</li>)
             )}
         </ul>
+      </div>
     </div>
+    
   )
 }
 

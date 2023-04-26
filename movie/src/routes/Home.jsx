@@ -1,6 +1,7 @@
 import React from 'react'
 import Movie from '../Component/Movie'
 import { useState, useEffect } from 'react';
+import './Home.css'
 
 const Home = () => {
 
@@ -21,8 +22,8 @@ const Home = () => {
   console.log(movies)
 
   return (
-    <div>
-        {loading ? <h1>Loading...</h1> : movies.map((movie) => (
+    <div className='movie-home'>
+        {loading ? <h1 className='loading'>Loading...</h1> : movies.map((movie) => (
         <Movie 
           key={movie.id}
           id={movie.id}

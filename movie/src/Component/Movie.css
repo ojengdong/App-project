@@ -1,0 +1,14 @@
+li {
+    list-style: none;
+}
+
+.movie-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movie-box img {
+    width: 500px;
+}
