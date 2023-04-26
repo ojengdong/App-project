@@ -7,7 +7,7 @@ const Movie = ({id, coverImg, title, summary, genres}) => {
   return (
     <div className='movie-box'>
       <div>
-        <img src={coverImg} alt="movie img" />
+        <img src={coverImg} alt="movie img" className='movie-img'/>
         <h2>
           <Link to={`/movie/${id}`}>
             {title}
