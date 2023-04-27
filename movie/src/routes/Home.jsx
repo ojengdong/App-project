@@ -23,6 +23,7 @@ const Home = () => {
 
   return (
     <div className='movie-home'>
+      <div className='movie-item'>
         {loading ? <h1 className='loading'>Loading...</h1> : movies.map((movie) => (
         <Movie 
           key={movie.id}
@@ -33,6 +34,7 @@ const Home = () => {
           genres={movie.genres}
         />
           ))}
+      </div>
     </div>
   )
 }

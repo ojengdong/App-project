@@ -14,15 +14,26 @@ a {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: black;
+    align-items: center;
+    /* background-color: black; */
     color: #fff;
+    position: relative;
+}
+
+.movie-item {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    border: 2px solid blue;
 }
 
 .loading {
-    width: 100%;
+    width: 50%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    display: flex;
 }
