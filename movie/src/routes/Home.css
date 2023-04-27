@@ -9,15 +9,52 @@ a {
     text-decoration: none;
 }
 
+/* #app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+} */
+
+/* .poster{
+    -webkit-box-reflect: below 30px linear-gradient(transparent, rgba(0,0,0,0), rgba(0,0,0,0.3));
+} */
+
 .movie-home {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: black; */
+    background-color: black;
     color: #fff;
-    position: relative;
 }
 
 .movie-item {
@@ -26,12 +63,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    border: 2px solid blue;
+    -webkit-box-reflect: below 30px linear-gradient(transparent, rgba(0,0,0,0), rgba(0,0,0,0.3));
 }
 
+
+
 .loading {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;

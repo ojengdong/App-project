@@ -14,18 +14,7 @@ const Movie = ({id, coverImg, title, summary, genres}) => {
 
   return (
     <div className='movie-box'>
-      <Swiper
-        slidesPerView={4}
-        centeredSlides={true}
-        spaceBetween={30}
-        grabCursor={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
+      
           <div className='movie-list'>
               <img src={coverImg} alt="movie img" className='movie-img'/>
             <h2>
@@ -40,8 +29,6 @@ const Movie = ({id, coverImg, title, summary, genres}) => {
                 )}
             </ul>
           </div>
-          </SwiperSlide>
-      </Swiper>
     </div>
   )
 }
