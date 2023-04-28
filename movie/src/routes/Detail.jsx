@@ -13,7 +13,9 @@ const getMovie = async () => {
         getMovie();
     }, [])
   return (
-    <div>Detail</div>
+    <div className='Detail-box'>
+      
+    </div>
   )
 }
 

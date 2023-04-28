@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation";
-import { Pagination, Navigation, EffectCoverflow, Mousewheel } from "swiper";
+import { Pagination, Navigation, EffectCoverflow, Mousewheel,Keyboard } from "swiper";
 import './Home.css'
 
 const Home = () => {
@@ -30,6 +30,9 @@ const Home = () => {
     
     <div className='movie-home'>
       <Swiper
+        keyboard={{
+          enabled: true,
+        }}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -43,11 +46,15 @@ const Home = () => {
         }}
         navigation={true} // 네비게이션 버튼
         mousewheel={true} // 마우스 휠
-        modules={[EffectCoverflow,Navigation,Mousewheel]} // 모듈추가
+        modules={[EffectCoverflow,Navigation,Mousewheel,Keyboard]} // 모듈추가
         className="mySwiper"
       >
       <div className='movie-item'>
-        {loading ? <div className='loading-box'><h1 className='loading'>Loading...</h1> <div className='animation'></div> </div>  : movies.map((movie) => (
+        {loading ? 
+        <div className='loading-box'>
+          <h1 className='loading'>Loading...</h1> 
+          <div className='animation'></div> 
+          </div>  : movies.map((movie) => (
           <SwiperSlide>
         <Movie 
           key={movie.id}
