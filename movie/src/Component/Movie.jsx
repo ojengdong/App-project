@@ -14,14 +14,13 @@ const Movie = ({id, coverImg, title, summary, genres}) => {
 
   return (
     <div className='movie-box'>
-      
           <div className='movie-list'>
+          <Link to={`/movie/${id}`}>
               <img src={coverImg} alt="movie img" className='movie-img'/>
-            <h2>
-              <Link to={`/movie/${id}`}>
-                {title}
-              </Link>
-            </h2>
+            <h3 className='title'>
+              {title}
+            </h3>
+          </Link>
             <p className='summary'>{summary.length > 235 ? `${summary.slice(0,235)}...`: summary}</p>
             <ul className='genres-item'>
                 {genres.map((e) => 

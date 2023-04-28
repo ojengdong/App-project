@@ -17,11 +17,12 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .movie-list {
-    background-color: gray;
-    width: 800px;
+    /* background-color: gray; */
+    width: 500px;
     height: 600px;
     border-radius: 8px;
     display: flex;
@@ -29,12 +30,39 @@ li {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    text-align: center;
+    transition: all 500ms ease-in-out;
+}
+
+.movie-list:hover {
+    top: 10px;
+    opacity: 0.7;
 }
 
 .movie-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
+}
+
+.title {
+    margin: 10px 0;
+}
+
+.genres-item {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #dadada;
+    margin-top: 10px;
+}
+
+.genres-list {
+    margin: 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

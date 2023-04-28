@@ -47,7 +47,7 @@ const Home = () => {
         className="mySwiper"
       >
       <div className='movie-item'>
-        {loading ? <h1 className='loading'>Loading...</h1> : movies.map((movie) => (
+        {loading ? <div className='loading-box'><h1 className='loading'>Loading...</h1> <div className='animation'></div> </div>  : movies.map((movie) => (
           <SwiperSlide>
         <Movie 
           key={movie.id}
