@@ -38,15 +38,15 @@ const Home = () => {
         centeredSlides={true}
         slidesPerView={4}
         coverflowEffect={{
-          rotate: 10, // 회전각도
+          rotate: 10, 
           stretch: 0, 
-          depth: 100, // 깊이감도
-          modifier: 2, // 
-          slideShadows: true,//선택한 부분 밝게 나머지는 그늘지게 해준다.
+          depth: 100, 
+          modifier: 2,  
+          slideShadows: true,
         }}
-        navigation={true} // 네비게이션 버튼
-        mousewheel={true} // 마우스 휠
-        modules={[EffectCoverflow,Navigation,Mousewheel,Keyboard]} // 모듈추가
+        navigation={true} 
+        mousewheel={true} 
+        modules={[EffectCoverflow,Navigation,Mousewheel,Keyboard]} 
         className="mySwiper"
       >
       <div className='movie-item'>

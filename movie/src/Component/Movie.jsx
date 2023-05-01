@@ -10,8 +10,6 @@ import {useState, useRef} from 'react'
 import './Movie.css'
 
 const Movie = ({id, coverImg, title, summary, genres}) => {
-    
-
   return (
     <div className='movie-box'>
           <div className='movie-list'>
