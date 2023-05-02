@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import Movie from '../Component/Movie'
 import './Detail.css'
@@ -18,19 +18,24 @@ const Detail = (props) => {
 }
     useEffect(() => {
         getMovie();
-    }, [])
+    }, [id])
 
   return (
     <div className='Detail-box'>
       <Container>
-        <Row>m b4v
+        <Row>
           <Col key={id}>
+            {movie ? (
              <Movie 
-              medium_cover_image={movie.medium_cover_image}
+              coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
               genres={movie.genres}
              />
+            ) : (
+              <div>Loading...</div>
+            )
+            }
           </Col>
         </Row>
       </Container>
