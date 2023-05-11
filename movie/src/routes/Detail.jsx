@@ -26,17 +26,39 @@ const Detail = (props) => {
         <Row>
           <Col key={id}>
             {movie ? (
-             <Movie 
-              coverImg={movie.medium_cover_image}
-              title={movie.title}
-              summary={movie.summary}
-              genres={movie.genres}
-             />
+             <div>
+              <img src={movie.medium_cover_image} alt="movie-img" />
+              <h1>{movie.title}</h1>
+              <span>{movie.summary}</span>
+              <ul>
+                {movie.genres.map((genres,index) => (
+                  <li key={index}>{genres}</li>
+                ))}
+              </ul>
+             </div>
             ) : (
-              <div>Loading...</div>
+              <div className='Detail-loading-box'>
+                <h1 className='Detail-loading'>
+                Loading...
+                </h1>
+                <div className='loading-animation'></div>
+              </div>
             )
             }
           </Col>
+          {/* <Col>
+          {movie &&(
+            <div>
+              <strong>{movie.title}</strong>
+              <p>{movie.summary}</p>
+              <ul>
+                {movie.genres.map((genres,index) =>(
+                  <li key={index}>{genres}</li>
+                ))}
+              </ul>
+            </div>
+            )}
+          </Col> */}
         </Row>
       </Container>
     </div>

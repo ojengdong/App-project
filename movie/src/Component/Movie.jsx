@@ -19,13 +19,13 @@ const Movie = ({id, coverImg, title, summary, genres}) => {
               {title}
             </h3>
           </Link>
-            {summary &&
-            (<p className='summary'>{summary.length > 235 ? `${summary.slice(0,235)}...`: summary}</p>)}
-            <ul className='genres-item'>
-                {genres.map((e) => 
-                (<li className='genres-list' key={e}>{e}</li>)
-                )}
-            </ul>
+          <p>{summary}</p>
+          <ul>
+            {genres.map((genres) => (
+              <li>{genres}</li>
+            ))}
+          </ul>
+            
           </div>
     </div>
   )
