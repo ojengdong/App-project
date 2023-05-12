@@ -55,7 +55,7 @@ const Home = () => {
         <div className='loading-box'>
           <h1 className='loading'>Loading...</h1> 
           <div className='animation'></div> 
-          </div>  : movies.map((movie) => (
+        </div>  : movies.map((movie) => (
           <SwiperSlide>
         <Movie 
           key={movie.id}

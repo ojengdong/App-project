@@ -2,40 +2,23 @@ body {
     background-color: black;
 }
 
-.Detail-loading-box {
+.summary {
+    color: #fff;
+}
+
+.genres-item {
+    width: 70%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .Detail-loading {
-      width: 100vw;
-      height: 100vh;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      color: #fff;
-  }
+    justify-content: space-evenly;
+    border-top: 1px solid #dadada;
+    margin-top: 10px;
+}
 
-  .loading-animation {
-    top: 55%;
-    left: 48%;
-    width: 50px;
-    height: 50px;
-    border: 5px solid lightgray;
-    border-top: 5px solid gray;
-    border-radius: 50%;
-    position: absolute;
-    animation: loa 1s linear infinite
-  }
-
-  @keyframes loa {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-  }
+.genres-list {
+    margin: 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}

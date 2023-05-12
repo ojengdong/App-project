@@ -12,21 +12,20 @@ import './Movie.css'
 const Movie = ({id, coverImg, title, summary, genres}) => {
   return (
     <div className='movie-box'>
-          <div className='movie-list'>
+        <div className='movie-list'>
           <Link to={`/movie/${id}`}>
               <img src={coverImg} alt="movie img" className='movie-img'/>
             <h3 className='title'>
               {title}
             </h3>
           </Link>
-          <p>{summary}</p>
-          <ul>
+          <p className='summary'>{summary}</p>
+          <ul className='genres-item'>
             {genres.map((genres) => (
-              <li>{genres}</li>
+              <li className='genres-list'>{genres}</li>
             ))}
           </ul>
-            
-          </div>
+        </div>
     </div>
   )
 }

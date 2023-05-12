@@ -24,7 +24,6 @@ li {
     /* background-color: gray; */
     width: 500px;
     height: 600px;
-    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,20 +48,6 @@ li {
 
 .title {
     margin: 10px 0;
+    color: #fff;
 }
 
-.genres-item {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border-top: 1px solid #dadada;
-    margin-top: 10px;
-}
-
-.genres-list {
-    margin: 8px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
