@@ -67,6 +67,7 @@ const Home = () => {
           genres={movie.genres}
           rating={movie.rating}
           year={movie.year}
+          runtime={movie.runtime}
         />
         </SwiperSlide>
           ))}
