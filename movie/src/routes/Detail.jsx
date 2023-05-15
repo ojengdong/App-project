@@ -5,55 +5,46 @@ import Movie from '../Component/Movie'
 import './Detail.css'
 import Home from './Home'
 
-const Detail = ({medium_cover_image,title,summary,genres}) => {
-  const [movie, setMovie] = useState(null)
+const Detail = ({medium_cover_image,title,summary,genres,rating,year}) => {
+  const [movie,setMovie] =useState([])
+  const [loading,setLoading] = useState(false);
   const {id} = useParams();
-  const getMovie = async () => {
-    try{
-    const response = await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-    const json = await response.json()
-      setMovie(json.data.movie)
-      console.log(json.data.movie)
-    }catch (error){
-          console.error(error)
-        }
-}
+    const getMovie = async () => {
+      try{
+      const json = await(await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`
+      )
+    ).json()
+    setMovie(json.data.movie)
+    } catch (error) {
+
+    }
+  }
+  
     useEffect(() => {
         getMovie();
-    }, [id])
-
-    if(!movie) {
-      return null
-    }
-
+    }, [])
+    console.log(movie)
   return (
-    <div>
-      <Movie 
-        coverImg={movie.medium_cover_image}
-        title={movie.title}
-        summary={movie.summary}
-        genres={movie.genres}
-      />
-      
+    <div className='Detail-box'>
+      <div className='Detail-img-box'>
+        <img src={movie.medium_cover_image} alt="" />
+      </div>
+      <div className='Detail-movie-wrapper'>
+        <h2 className='Detail-title'>{movie.title}</h2>
+          <div>
+            <p>{movie.summary}</p>
+          </div>
+        <ul className='Detail-genres-list'>
+          <li className='Detail-genres-item'>
+            {movie.genres}
+          </li>
+        </ul>
+        <div className='rating-year'>
+          <strong>{movie.rating}</strong>
+          <p>{movie.year}</p>
+        </div>
+      </div>
     </div>
-    // <Container>
-    //   <Row>
-    //     <Col>
-    //       <div>
-    //         <img src={movie?.medium_cover_image} alt="" />
-    //       </div>
-    //     </Col>
-    //     <Col>
-    //       <h2 className='Detail-title'>{movie?.title}</h2>
-    //       <p className='Detail-summary'>{movie?.summary}</p>
-    //       <ul className='Detail-genres-item'>
-    //         {movie.genres && movie.genres.map(() => {
-    //           <li className='Detail-genres-list'>{movie.genres}</li>
-    //         })}
-    //       </ul>
-    //     </Col>
-    //   </Row>
-    // </Container>
   )
 }
 

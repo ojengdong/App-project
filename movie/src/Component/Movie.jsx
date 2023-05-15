@@ -9,7 +9,7 @@ import { Pagination, Navigation } from "swiper";
 import {useState, useRef} from 'react'
 import './Movie.css'
 
-const Movie = ({id, coverImg, title, summary, genres}) => {
+const Movie = ({id, coverImg, title, summary, genres,rating,year}) => {
   return (
     <div className='movie-box'>
         <div className='movie-list'>
@@ -19,12 +19,17 @@ const Movie = ({id, coverImg, title, summary, genres}) => {
               {title}
             </h3>
           </Link>
-          <p className='summary'>{summary}</p>
+          <div className='summary-border'></div>
+          <div>
+            <p>{rating}</p>
+            <span>{year}</span>
+          </div>
+          {/* <p className='summary'>{summary}</p>
           <ul className='genres-item'>
             {genres.map((genres) => (
               <li className='genres-list'>{genres}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
     </div>
   )

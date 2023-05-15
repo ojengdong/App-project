@@ -1,24 +1,48 @@
 body {
     background-color: black;
-}
-
-.summary {
     color: #fff;
 }
 
-.genres-item {
-    width: 70%;
+.Detail-box {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.Detail-img-box {
+    margin: 0 50px;
+}
+
+.Detail-img-box img {
+    width: 400px;
+}
+
+.Detail-movie-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    border: 2px solid red;
+}
+
+.Detail-title {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.Detail-genres-item {
+    display: flex;
+    font-size: 20px;
+    border: 2px solid #fff;
+}
+
+.rating-year {
+    width: 100%;
+    display: flex;
     justify-content: space-evenly;
-    border-top: 1px solid #dadada;
-    margin-top: 10px;
-}
-
-.genres-list {
-    margin: 8px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
 }
