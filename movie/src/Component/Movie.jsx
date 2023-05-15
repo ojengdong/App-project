@@ -24,8 +24,8 @@ const Movie = ({id, coverImg, title, summary, genres,rating,year}) => {
             <p>{rating}</p>
             <span>{year}</span>
           </div>
-          {/* <p className='summary'>{summary}</p>
-          <ul className='genres-item'>
+          <p className='summary'>{summary}</p>
+          {/* <ul className='genres-item'>
             {genres.map((genres) => (
               <li className='genres-list'>{genres}</li>
             ))}

@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, EffectCoverflow, Mousewheel,Keyboard } from "swiper";
 import './Home.css'
 
+
 const Home = () => {
 
     const [loading, setLoading] = useState(true);
