@@ -40,7 +40,8 @@ body {
 }
 
 .Detail-img-box img {
-    width: 500px;
+    width: 100%;
+    height: 80%;
 }
 
 .Detail-movie-wrapper {
