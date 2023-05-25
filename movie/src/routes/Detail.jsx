@@ -30,7 +30,7 @@ const Detail = (props) => {
       </div>
   ) : (
     <div className='Detail-box'>
-      <Link to={'/'}>
+      <Link to={`${process.env.PUBLIC_URL}/`}>
       <div className='back'>X</div>
       </Link>
       <div className='Detail-img-box'>
