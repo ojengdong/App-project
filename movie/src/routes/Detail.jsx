@@ -8,7 +8,7 @@ import Home from './Home'
 // import { House } from "@fortawesome/free-solid-svg-icons";
 
 const Detail = (props) => {
-  const [movie,setMovie] =useState([])
+  const [movie,setMovie] =useState([]);
   const [loading,setLoading] = useState(true);
   const {id} = useParams();
     const getMovie = async () => {
@@ -47,7 +47,11 @@ const Detail = (props) => {
         <div className='good-year-time'>
           <strong>평점 : {movie?.rating}</strong>
           <p>개봉년도 : {movie?.year}</p>
-          <p>러닝타임 : {movie.runtime}</p>
+          <p>러닝타임 : {movie.runtime}분</p>
+        </div>
+        <div className="sumary-box">
+          {console.log(movie)}
+          <p>줄거리 : {movie?.description_full}</p>
         </div>
       </div>
     </div>
