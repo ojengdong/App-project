@@ -1,15 +1,3 @@
-li {
-    list-style: none;
-}
-
-/* body {
-    -ms-overflow-style: none;
-}
- 
-::-webkit-scrollbar {
-    display: none;
-} */
-
 .movie-box {
     width: 100%;
     height: 800px;
@@ -51,19 +39,23 @@ li {
     color: #fff;
 }
 
-.summary-border {
-    border: 1px solid #dadada;
+.empty-place {
+    height: 5%;
     width: 100%;
 }
 
-.summary{
-    margin: 10px auto;
+.genres-item {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .good-year {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 80%;
     font-size: 18px;
     font-weight: bold;
+    margin-top: 5%;
 }
+

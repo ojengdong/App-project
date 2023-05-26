@@ -7,6 +7,8 @@ import "swiper/css/pagination"
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import {useState, useRef} from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faStar} from "@fortawesome/free-solid-svg-icons"
 import './Movie.css'
 
 const Movie = ({id, coverImg, title, summary, genres,rating,year,runtime}) => {
@@ -19,18 +21,19 @@ const Movie = ({id, coverImg, title, summary, genres,rating,year,runtime}) => {
               {title}
             </h3>
           </Link>
-          <div className='summary-border'></div>
-          
-          <p className='summary'>{summary}</p>
-          <div className='good-year'>
-            <p>{rating}</p>
-            <span>{year}</span>
-          </div>
-          {/* <ul className='genres-item'>
+          <div className='empty-place'></div>
+
+          <ul className='genres-item'>
             {genres.map((genres) => (
               <li className='genres-list'>{genres}</li>
             ))}
-          </ul> */}
+          </ul>
+          
+          <div className='good-year'>
+            <p><FontAwesomeIcon icon={faStar} /> : {rating}</p>
+            <span>년도 : {year}</span>
+          </div>
+          
         </div>
     </div>
   )
