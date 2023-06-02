@@ -68,6 +68,7 @@ const Home = () => {
           rating={movie.rating}
           year={movie.year}
           runtime={movie.runtime}
+          url={movie.url}
         />
         </SwiperSlide>
           ))}

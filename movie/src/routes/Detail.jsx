@@ -57,6 +57,18 @@ const Detail = (props) => {
             ? `${movie.description_full.slice(0,300)}...` : movie.description_full}
             </p>
         </div>
+        <div className='url-box'>
+          <div className='url-text'>
+          <strong>Link</strong>
+          <p className='url'>
+            <Link 
+              to={`${movie.url}`} 
+              target='_blank'>
+                {movie.url}
+            </Link>
+          </p>
+          </div>
+        </div>
       </div>
     </div>
   )

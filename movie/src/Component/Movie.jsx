@@ -22,12 +22,20 @@ const Movie = ({id, coverImg, title, summary, genres,rating,year,runtime}) => {
             </h3>
           </Link>
           <div className='empty-place'></div>
-
-          <ul className='genres-item'>
-            {genres.map((genres) => (
-              <li className='genres-list'>{genres}</li>
-            ))}
-          </ul>
+          
+          <div className='genres-box'>
+            <div className='genres-border-box'>
+              <div className='genres-border1'></div>
+              <div>장르</div>
+              <div className='genres-border1'></div>
+            </div>
+            <ul className='genres-item'>
+              {genres.map((genres) => (
+                <li className='genres-list'>{genres}</li>
+              ))}
+            </ul>
+            <div className='genres-border2'></div>
+          </div>
           
           <div className='good-year'>
             <p><FontAwesomeIcon icon={faStar} /> : {rating}</p>
