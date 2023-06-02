@@ -7,6 +7,8 @@ import "swiper/css/pagination"
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import {useState, useRef} from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faStar} from "@fortawesome/free-solid-svg-icons"
 import './Movie.css'
 
 const Movie = ({id, coverImg, title, summary, genres,rating,year,runtime}) => {
@@ -19,18 +21,27 @@ const Movie = ({id, coverImg, title, summary, genres,rating,year,runtime}) => {
               {title}
             </h3>
           </Link>
-          <div className='summary-border'></div>
+          <div className='empty-place'></div>
           
-          <p className='summary'>{summary}</p>
-          <div className='good-year'>
-            <p>{rating}</p>
-            <span>{year}</span>
+          <div className='genres-box'>
+            <div className='genres-border-box'>
+              <div className='genres-border1'></div>
+              <div>장르</div>
+              <div className='genres-border1'></div>
+            </div>
+            <ul className='genres-item'>
+              {genres.map((genres) => (
+                <li className='genres-list'>{genres}</li>
+              ))}
+            </ul>
+            <div className='genres-border2'></div>
           </div>
-          {/* <ul className='genres-item'>
-            {genres.map((genres) => (
-              <li className='genres-list'>{genres}</li>
-            ))}
-          </ul> */}
+          
+          <div className='good-year'>
+            <p><FontAwesomeIcon icon={faStar} /> : {rating}</p>
+            <span>년도 : {year}</span>
+          </div>
+          
         </div>
     </div>
   )

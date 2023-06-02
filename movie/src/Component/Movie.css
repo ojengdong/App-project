@@ -1,15 +1,3 @@
-li {
-    list-style: none;
-}
-
-/* body {
-    -ms-overflow-style: none;
-}
- 
-::-webkit-scrollbar {
-    display: none;
-} */
-
 .movie-box {
     width: 100%;
     height: 800px;
@@ -51,19 +39,46 @@ li {
     color: #fff;
 }
 
-.summary-border {
-    border: 1px solid #dadada;
+.empty-place {
+    height: 5%;
     width: 100%;
 }
 
-.summary{
-    margin: 10px auto;
+.genres-box {
+    width: 100%;
+}
+
+.genres-border-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 150px;
+    grid-gap: 1.5rem;
+}
+
+.genres-border1 {
+    border: 1px solid #dadada;
+    width: 130px;
+}
+
+.genres-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.genres-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .good-year {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 80%;
     font-size: 18px;
     font-weight: bold;
+    margin-top: 5%;
 }
